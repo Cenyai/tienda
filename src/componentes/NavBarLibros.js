@@ -1,13 +1,21 @@
+
+import { useEffect } from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 function NavbarLibros(props){
+
+  useEffect(()=>{
+    //console.log("use effect en NavBarLibros");
+  })
+
     return(
         <Navbar bg="light" expand="lg">
         <Navbar.Brand href="#">Tienda</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#inicio">Home</Nav.Link>
-            <Nav.Link href="#carrito">Carrito({props.carrito})</Nav.Link>              
+            <Link to="/">Home</Link>
+            <Link to="/carrito">Carrito({props.carrito})</Link>              
           </Nav>
         </Navbar.Collapse>
       </Navbar>

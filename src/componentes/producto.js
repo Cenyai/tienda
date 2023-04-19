@@ -22,7 +22,7 @@ function producto(props) {
         <Button onClick={()=>{ props.onClick2()}} variant="primary">Añadir al carrito</Button>
       </Card.Body>
 
-    </Card >
+    </Card>
 
   );
 }
